@@ -13,6 +13,9 @@
 
 .title {
   font-weight: bold;
+  font-family: var(--font-special);
+  font-size: 20px;
+  line-height: 24px;
   padding: 16px 0;
   margin-left: 32px;
   display: flex;

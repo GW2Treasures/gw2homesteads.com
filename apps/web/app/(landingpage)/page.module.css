@@ -6,7 +6,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 96px;
+  padding: 96px 32px;
   min-height: 100vh;
   text-shadow: 0 0 16px rgba(0 0 0 / .5);
+  font-family: var(--font-special);
 }

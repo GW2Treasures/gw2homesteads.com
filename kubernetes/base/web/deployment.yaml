@@ -25,6 +25,8 @@ spec:
         operator: Equal
         value: arm64
         effect: NoSchedule
+      nodeSelector:
+        kubernetes.io/arch: arm64
       containers:
       - name: web
         image: ghcr.io/gw2treasures/gw2homesteads.com/web:latest

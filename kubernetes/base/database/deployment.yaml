@@ -22,6 +22,8 @@ spec:
         operator: Equal
         value: arm64
         effect: NoSchedule
+      nodeSelector:
+        kubernetes.io/arch: arm64
       volumes:
       - name: database-pg17-data
         persistentVolumeClaim:

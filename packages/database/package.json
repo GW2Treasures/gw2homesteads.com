@@ -1,7 +1,7 @@
 {
   "name": "@gw2homesteads.com/database",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",

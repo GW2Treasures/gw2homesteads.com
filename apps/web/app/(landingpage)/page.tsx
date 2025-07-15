@@ -4,6 +4,7 @@ import { Engagement } from 'next/font/google';
 
 const font = Engagement({
   weight: '400',
+  subsets: ['latin']
 });
 
 export default function Home() {

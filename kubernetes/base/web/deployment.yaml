@@ -27,7 +27,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: web
-        image: ghcr.io/GW2Treasures/homesteads/web:latest
+        image: ghcr.io/gw2treasures/gw2homesteads.com/web:latest
         imagePullPolicy: IfNotPresent
         resources:
           requests:

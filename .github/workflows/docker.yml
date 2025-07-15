@@ -75,9 +75,9 @@ jobs:
         resources:
         - ../kubernetes/local
         images:
-        - name: ghcr.io/GW2Treasures/homesteads/web
+        - name: ghcr.io/gw2treasures/gw2homesteads.com/web
           newTag: ${{ env.IMAGE_VERSION }}
-        - name: ghcr.io/GW2Treasures/homesteads/database-migration
+        - name: ghcr.io/gw2treasures/gw2homesteads.com/database-migration
           newTag: ${{ env.IMAGE_VERSION }}
         EOF
     - run: kubectl kustomize .temp

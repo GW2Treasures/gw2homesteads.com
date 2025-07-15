@@ -11,8 +11,8 @@ resources:
 - web
 
 images:
-- name: ghcr.io/GW2Treasures/homesteads/web
+- name: ghcr.io/gw2treasures/gw2homesteads.com/web
   newTag: latest
 
-- name: ghcr.io/GW2Treasures/homesteads/database-migration
+- name: ghcr.io/gw2treasures/gw2homesteads.com/database-migration
   newTag: latest

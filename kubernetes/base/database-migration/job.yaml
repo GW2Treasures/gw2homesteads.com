@@ -15,7 +15,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: database-migration
-        image: ghcr.io/GW2Treasures/homesteads/database-migration:latest
+        image: ghcr.io/gw2treasures/gw2homesteads.com/database-migration:latest
         imagePullPolicy: IfNotPresent
         env:
         - name: DATABASE_URL

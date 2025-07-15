@@ -1,6 +1,6 @@
 services:
   web:
-    image: ghcr.io/GW2Treasures/gw2homesteads.com/web:${IMAGE_VERSION:-latest}
+    image: ghcr.io/gw2treasures/gw2homesteads.com/web:${IMAGE_VERSION:-latest}
     build:
       context: .
       dockerfile: apps/web/Dockerfile
@@ -25,7 +25,7 @@ services:
       - 54329:5432
 
   database-migration:
-    image: ghcr.io/GW2Treasures/gw2homesteads.com/database-migration:${IMAGE_VERSION:-latest}
+    image: ghcr.io/gw2treasures/gw2homesteads.com/database-migration:${IMAGE_VERSION:-latest}
     build:
       context: .
       dockerfile: apps/database-migration/Dockerfile

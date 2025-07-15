@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gw2homesteads.com/database": "workspace:*",
+    "@gw2me/client": "0.9.0",
+    "next": "15.4.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "4.0.5",
+    "zod-form-data": "3.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
+    "@types/node": "24.0.14",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "eslint": "9.31.0",
+    "eslint-config-next": "15.4.1",
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,9 @@
+kind: ConfigMap
+apiVersion: v1
+
+metadata:
+  name: database-pg17
+
+data:
+  user: homesteads
+  password: a28ab927-c367-4b82-aab8-bb4b60120aca

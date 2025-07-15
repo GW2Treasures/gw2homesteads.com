@@ -1,0 +1,36 @@
+services:
+  web:
+    image: ghcr.io/gw2treasures.com/homesteads/web:${IMAGE_VERSION:-latest}
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=postgresql://homesteads:homesteads@database:5432/homesteads?schema=public
+      - BASE_URL=http://localhost:3000
+    ports:
+      - 3000:3000
+
+  database:
+    image: postgres:17.5-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=homesteads
+      - POSTGRES_PASSWORD=homesteads
+      - POSTGRES_DB=homesteads
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - .docker/database-pg17:/var/lib/postgresql/data
+    ports:
+      - 54329:5432
+
+  database-migration:
+    image: ghcr.io/gw2treasures.com/homesteads/database-migration:${IMAGE_VERSION:-latest}
+    build:
+      context: .
+      dockerfile: apps/database-migration/Dockerfile
+    restart: on-failure:5
+    depends_on:
+      - database
+    environment:
+      - DATABASE_URL=postgresql://homesteads:homesteads@database:5432/homesteads?schema=public

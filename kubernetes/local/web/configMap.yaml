@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+
+metadata:
+  name: web
+
+data:
+  db: postgresql://homesteads:a28ab927-c367-4b82-aab8-bb4b60120aca@database-pg17:5432/homesteads?schema=public
+  url: http://gw2homesteads.kubernetes.localhost/
+  gw2meClientId: none
+  gw2meClientSecret: missing

@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: gw2homesteads
+
+commonLabels:
+  app.kubernetes.io/part-of: gw2homesteads
+
+resources:
+- ../base
+- database
+- web
+
+images:
+- name: ghcr.io/GW2Treasures/homesteads/web
+  newTag: latest
+
+- name: ghcr.io/GW2Treasures/homesteads/database-migration
+  newTag: latest

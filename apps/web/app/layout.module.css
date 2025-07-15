@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: hsl(14.21deg 25.68% 15% / 80%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  backdrop-filter: blur(16px);
+}
+
+.title {
+  font-weight: bold;
+  padding: 16px 0;
+  margin-left: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid transparent;
+  transition: border-color .4s ease-in;
+}
+
+.title img {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.title:hover {
+  border-bottom-color: #ffa000;
+  transition: border-color .2s ease-out;
+}
+
+.headerActions {
+  margin-left: auto;
+  padding-right: 16px;
+}

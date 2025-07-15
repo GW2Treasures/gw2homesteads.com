@@ -2,6 +2,7 @@
   "name": "gw2homesteads.com",
   "private": true,
   "scripts": {
+    "changeset": "changeset",
     "dev:web": "turbo run dev --filter=web",
     "prisma:studio": "pnpm run --filter @gw2homesteads.com/database prisma:studio",
     "build": "turbo run build",

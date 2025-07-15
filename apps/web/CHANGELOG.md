@@ -1,5 +1,11 @@
 # web
 
+## 0.1.1
+
+### Patch Changes
+
+- Update fonts and icon ([#8](https://github.com/GW2Treasures/gw2homesteads.com/pull/8) by [@darthmaim](https://github.com/darthmaim))
+
 ## 0.1.0
 
 ### Minor Changes

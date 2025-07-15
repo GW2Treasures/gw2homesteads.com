@@ -1,10 +1,10 @@
 # syntax=docker/dockerfile:1.13
 
-ARG node_version=22.13.0-alpine3.20
+ARG node_version=22.17.0-alpine3.21
 # renovate: datasource=npm packageName=turbo
-ARG turbo_version=2.4.0
+ARG turbo_version=2.5.4
 # renovate: datasource=npm packageName=sharp
-ARG sharp_version=0.33.5
+ARG sharp_version=0.34.3
 
 
 # common base for all stages

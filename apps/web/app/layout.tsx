@@ -6,6 +6,13 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { UserButton } from "@/components/UserButton";
 import icon from './icon.svg';
+import { Sansita_Swashed } from "next/font/google";
+
+const font = Sansita_Swashed({
+  weight: 'variable',
+  subsets: ['latin'],
+  variable: '--font-special'
+});
 
 export default function RootLayout({
   children,
@@ -13,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={font.variable}>
       <body>
         <header className={styles.header}>
           <Link href="/" className={styles.title}>

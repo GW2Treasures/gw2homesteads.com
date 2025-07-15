@@ -14,7 +14,16 @@ jobs:
       id-token: write
       pull-requests: write
     steps:
+    - uses: actions/create-github-app-token@v2
+      id: generate-token
+      with:
+        app-id: ${{ secrets.GW2T_RELEASE_APP_ID }}
+        private-key: ${{ secrets.GW2T_RELEASE_APP_PRIVATE_KEY }}
+
     - uses: actions/checkout@v4
+      with:
+        token: ${{ steps.generate-token.outputs.token }}
+
     - name: Setup Node.js env
       uses: ./.github/actions/setup-node-env
       with:
@@ -24,7 +33,7 @@ jobs:
       id: changeset
       uses: changesets/action@v1.4.9
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
       with:
         title: New Release
         commit: Create new release

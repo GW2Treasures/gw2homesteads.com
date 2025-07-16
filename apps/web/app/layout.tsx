@@ -27,6 +27,9 @@ export default function RootLayout({
             <img src={icon.src}/>
             GW2 Homesteads
           </Link>
+          <Link href="/example" className={styles.link}>
+            Example
+          </Link>
           <div className={styles.headerActions}>
             <Suspense><UserButton/></Suspense>
           </div>

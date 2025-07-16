@@ -10,6 +10,9 @@ body {
   text-size-adjust: none;
   color: var(--color-text);
   background-color: var(--color-background);
+
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 96px;
 }
 
 * {

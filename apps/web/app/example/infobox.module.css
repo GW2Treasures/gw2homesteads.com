@@ -1,0 +1,41 @@
+.box {
+  flex: 1;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: hsl(14.21deg 25.68% 15% / 80%);
+  backdrop-filter: blur(16px);
+}
+
+.title {
+  font-family: var(--font-special);
+  font-size: 24px;
+}
+
+.tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags > span {
+  border: 1px solid rgba(0 0 0 / .5);
+  padding: 0 4px;
+  font-size: 14px;
+  border-radius: 2px;
+  background-color: rgba(0 0 0 / .2);
+}
+
+.description {
+  margin-top: 16px;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+}
+
+.actions > * {
+  flex: 1;
+}

@@ -1,0 +1,89 @@
+.page {
+  display: flex;
+}
+
+.gallery {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide {
+  scroll-snap-align: start;
+  scroll-margin-top: -8px;
+  padding: 8px 398px 8px 16px;
+  display: flex;
+  position: relative;
+}
+
+.slide:first-child {
+  padding-top: 96px;
+}
+.slide:last-child {
+  padding-bottom: 16px;
+}
+
+.slideBg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  filter: blur(16px);
+}
+
+.img {
+  width: 100%;
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0 0 16px rgba(0 0 0 / .5);
+}
+
+.intro {
+  composes: slide;
+
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: var(--aspect-ratio) / 2;
+  position: relative;
+}
+
+.intro > .img {
+  position: sticky;
+  top: 96px;
+}
+
+.introCard {
+  aspect-ratio: var(--aspect-ratio) / 1;
+  position: absolute;
+  z-index: 2;
+  left: 0; right: 0;
+  top: 0;
+  font-family: var(--font-special);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 16px rgba(0 0 0 / .5);
+  font-size: 128px;
+}
+
+.introCard::after {
+  content: '';
+  aspect-ratio: var(--aspect-ratio) / 1;
+  position: absolute;
+  left: 0; right: 0;
+  top: 0;
+  transform: translateY(100%);
+  scroll-snap-align: start;
+}
+
+.info {
+  position: fixed;
+  width: 366px;
+  top: 96px;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}

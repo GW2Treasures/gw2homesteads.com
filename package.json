@@ -12,12 +12,12 @@
     "node": "22 || >=24",
     "npm": "please-use-pnpm",
     "yarn": "please-use-pnpm",
-    "pnpm": "10.13.1"
+    "pnpm": "10.14.0"
   },
   "devDependencies": {
     "@changeset-bot/changelog": "0.0.4",
     "@changesets/cli": "2.29.5",
     "turbo": "2.5.5"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.14.0"
 }
